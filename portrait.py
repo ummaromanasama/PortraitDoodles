@@ -13,9 +13,13 @@ chosen_black_indices = black_indices[np.random.choice(black_indices.shape[0], re
 #Black and white image popup 
 plt.figure(figsize=(5, 5), dpi=100)  
 plt.scatter([x[1] for x in chosen_black_indices], [x[0] for x in chosen_black_indices], color='black', s=1)  
+
+#Flips image points and hide x and y axis
 plt.gca().invert_yaxis()  
 plt.xticks([])  
 plt.yticks([])
+
+#Connects dots
 plt.plot([x[1] for x in chosen_black_indices], [x[0] for x in chosen_black_indices], marker='o', color='black') 
 plt.show()
 
