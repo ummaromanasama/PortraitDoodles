@@ -23,11 +23,10 @@ print(result_set)
 
 #Black and white image popup 
 plt.figure(figsize=(5, 5), dpi=100)  
-plt.scatter(x, y, color='black', s=1)  
 plt.gca().invert_yaxis()  
 plt.xticks([])  
 plt.yticks([])
-plt.plot([x[1] for x in chosen_black_indices], [x[0] for x in chosen_black_indices], marker='o', color='black') 
+plt.plot(x, y, '-0') 
 plt.show()
 
 
