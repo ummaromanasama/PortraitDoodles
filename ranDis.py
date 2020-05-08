@@ -22,11 +22,9 @@ x = np.random.randint(10, size=3)
 y = np.random.randint(10, size=3)
 
 #Store coordinates points
-result = zip()
-result_list = list(result)
-result = zip(x, y)
-result_set = list(result)
-print(result_set)
+result = zip(x,y)
+result_List = list(result)
+print(result_List)
 
 #Accesing 2D array and calculating distance fomula and storing the info
 distance = []
