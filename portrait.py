@@ -15,11 +15,9 @@ x = [x[1] for x in chosen_black_indices]
 y = [x[0] for x in chosen_black_indices]
 
 #Store coordinates points
-result = zip()
-result_list = list(result)
-result = zip(x, y)
-result_set = set(result)
-print(result_set)
+result = zip(x,y)
+result_List = list(result)
+print(result_List)
 
 #Black and white image popup 
 plt.figure(figsize=(5, 5), dpi=100)  
