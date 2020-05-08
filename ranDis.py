@@ -2,38 +2,37 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import math
-
-#dont ask
-#How should the coordnates be formatted for the the distance forumla
-#option one it x and y values in an array togehter or
-#the x and y value seperated?
-
-#ask
-#if my calulation for the distance is correct and i properly stored the info.
-#how do I "manually connect tthe dots based off the information"
-#the new connecting the dots would go from shortest to longest route and no intersection...
-#I dont know if i need to prevent intersections becuase of the algorith or i do?
-#do i need to merge the coordinates and distance data then pict out the points based off the data and then eventually replot the points? manually?
-#whould it not be classified as a scatter plot if re plotted on purpuse in an scififc order?? trickey.
+from itertools import permutations 
 
 
 #Individual values
-x = np.random.randint(10, size=3)
-y = np.random.randint(10, size=3)
+num_dot = 3
+x = np.random.randint(10, size = num_dot)
+y = np.random.randint(10, size = num_dot)
 
 #Store coordinates points
 result = zip(x,y)
 result_List = list(result)
-print(result_List)
 
+#Permutation of each cooridnate in relation to the 
+#rest of the the cooridnate
+perm = permutations(result_List, num_dot)
+for i in perm: 
+    route = list(i)
+    route.append(result_List[0])
+    print(route)
+
+    
 #Accesing 2D array and calculating distance fomula and storing the info
-distance = []
-for i in range(len(result_List)):
-    for j in range(len(result_List[i])):
-        distance_formula = math.sqrt(((x[j]-x[i])**2)+((y[j]-y[i])**2))
-    distance.append(distance_formula)  
-print(distance) 
+# distance = []
+# for i in range(len(result_List)):
+#     for j in range(len(result_List[i])):
+#         distance_formula = math.sqrt(((x[j]-x[i])**2)+((y[j]-y[i])**2))
+#     distance.append(distance_formula)  
+# print(distance) 
+
 
 #pop up
-plt.plot(x, y, '-0')
-plt.show()
+# plt.plot(x, y, '-0')
+# plt.show()
+
