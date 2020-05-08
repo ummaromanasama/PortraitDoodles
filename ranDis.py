@@ -28,10 +28,9 @@ print(result_List)
 
 #Accesing 2D array and calculating distance fomula and storing the info
 distance = []
-for i in range(len(result_set)):
-    for j in range(len(result_set[i])):
-        distance_formula = math.sqrt(((x[i]-y[i])**2)+((x[j]-y[j])**2))
-    print(distance_formula)
+for i in range(len(result_List)):
+    for j in range(len(result_List[i])):
+        distance_formula = math.sqrt(((x[j]-x[i])**2)+((y[j]-y[i])**2))
     distance.append(distance_formula)  
 print(distance) 
 
