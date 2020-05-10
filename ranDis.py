@@ -3,7 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 from itertools import permutations 
-
+from itertools import combinations
+from math import hypot
 
 #Individual values
 num_dot = 3
@@ -21,16 +22,9 @@ for i in perm:
     route = list(i)
     route.append(result_List[0])
     print(route)
-
-    
-#Accesing 2D array and calculating distance fomula and storing the info
-# distance = []
-# for i in range(len(result_List)):
-#     for j in range(len(result_List[i])):
-#         distance_formula = math.sqrt(((x[j]-x[i])**2)+((y[j]-y[i])**2))
-#     distance.append(distance_formula)  
-# print(distance) 
-
+    for (x1, y1), (x2, y2) in zip(route, route[1:]):
+        distance_formula = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+        print(distance_formula)
 
 #pop up
 # plt.plot(x, y, '-0')
