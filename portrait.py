@@ -6,7 +6,7 @@ import math
 from itertools import permutations 
 
 #Number of dots
-dot_number = 1000
+dot_number = 12
 
 #Load image and convert to black and white
 original_image = Image.open("jg.jpg") 
@@ -67,7 +67,6 @@ y = [point[1] for point in shortest_route]
 
 plt.plot(x, y)
 plt.show()
-
 
 # #Customize popup
 # plt.figure(figsize=(5, 5), dpi=100)  
