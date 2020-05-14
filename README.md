@@ -6,3 +6,11 @@ Summary: Portrait Doodles takes in an uploaded portrait and essentially mimickin
 
 Problem: This project evolves around the traveling salesman problem which, doesn't have a conclusive answer. The approach I took requires a vast amount of RAM/CPU. The program is great for calculating permutations of 10 points but, generating permutations of 1,000 coordinate points is not an optimal way to approach the traveling salesman problem. With more points, I am able to make the portrait more distinguishable however, with fewer points the less distinguishable the portrait will turn out.
 
+With 10 points I was able to produce the following using the traveling salesman problem:
+![](images/tsp_one.png)
+![](images/tsp_two.png)
+![](images/tsp_three.png)
+
+
+
+
